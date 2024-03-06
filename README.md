@@ -14,3 +14,12 @@ KursRepository zu Kurs SQL Server - Neuerungen und Migration der ppedv AG
 ## Optimieren der Tabellen
 ### Kompression
 ### Systemsicht indexphysicalstats--> forwardrecordcounts 
+
+## QueryStore
+
+## Security
+### Dynamic Masking
+### Rowlevel Security
+### Always Encrypted
+
+
