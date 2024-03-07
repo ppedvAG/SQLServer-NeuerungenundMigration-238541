@@ -18,13 +18,27 @@ Seit SQL 2016: Standardwert statt 0 nun Anzagh der Kerne , aber max 8
 
 
 set statistics io, time on
+--IO = Anzahl der Seiten--> 1:1 RAM
+--time Dauer in ms   CPU ms
+
+
 
 
 select shipcountry, shipcity, SUM(freight) from KU  --62000 Seiten
 group by shipcountry, shipcity
 option  (maxdop 6)
---mit 8 Kernen: 950ms
+--mit 8 Kernen: , CPU-Zeit = 923 ms, verstrichene Zeit = 144 ms.
+--1 Kern: , CPU-Zeit = 406 ms, verstrichene Zeit = 419 ms.
+--4 Kerne: , CPU-Zeit = 625 ms, verstrichene Zeit = 166 ms.
 
+
+SQL Server-Analyse- und Kompilierzeit: 
+, CPU-Zeit = 175 ms, verstrichene Zeit = 175 ms.
+
+--SQL Server-Analyse- und Kompilierzeit: 
+--, CPU-Zeit = 175 ms, verstrichene Zeit = 175 ms.
+--56863  -- *8 
+--, CPU-Zeit = 1110 ms, verstrichene Zeit = 156 ms.
 
 --MAXDOP = 0 = alle
 --MAXDOP Server = 8 

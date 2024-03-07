@@ -14,3 +14,4 @@ select * from ku
 go 9
 
 alter table ku add id int identity
+

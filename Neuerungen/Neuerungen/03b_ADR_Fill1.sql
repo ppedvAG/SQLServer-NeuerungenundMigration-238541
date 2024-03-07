@@ -1,4 +1,4 @@
-WAITFOR TIME '18:47:00';
+
 USE NewStyle;
 GO
 
@@ -17,7 +17,7 @@ GO
 Begin tran
 
 declare @i as int= 1
-while @i< 1000000
+while @i< 400000
 	begin
 		insert into test1 
 		select @i,'XY', @i, GETDATE()
