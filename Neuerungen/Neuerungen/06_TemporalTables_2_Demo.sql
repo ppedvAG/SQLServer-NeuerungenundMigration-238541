@@ -53,7 +53,7 @@ where
 
 --Noch besser.. DS für einen Zeitpunkt
 select * from contacts 
-    FOR SYSTEM_TIME AS OF'2023-10-17 16:09:21'
+    FOR SYSTEM_TIME AS OF'2024-03-08 14:20:21'
 
 
 select * from contacts 
@@ -69,10 +69,12 @@ select * from contacts
 	order by CID
 
 
-select cid from contactshistory
+select * from contactshistory
 except
 select cid from contacts 
 
+
+alter table contacts add SPX int
 
 
 

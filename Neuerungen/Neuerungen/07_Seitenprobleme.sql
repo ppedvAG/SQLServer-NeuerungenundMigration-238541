@@ -44,14 +44,7 @@ Brent Ozar...  sp_blitzindex
 --wird bezahlt mit CPU
 
 
-IO --------------------->
---->
-
-RAM -------------------->
------------->
-CPU -------------------->
---->------->
-
+--Weniger IO ---------------------> weniger RAM --------------------> weniger CPU
 
 
 

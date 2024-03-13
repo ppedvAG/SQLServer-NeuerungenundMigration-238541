@@ -14,11 +14,11 @@ FILENAME = 'PfadundDateiname der Snapshotdatendatei.mdf')
 AS SNAPSHOT OF OrgDb;
 GO
 
-create database  nw_1400 
+create database  nw_1616
 ON
 (
 	NAME=Northwind, --alte mdf
-	FILENAME='D:\_SQLDBDATA\nw_1400 .mdf'  --StdPfad des SQL Server
+	FILENAME='c:\_SQLDATA\nw_1616 .mdf'  --StdPfad des SQL Server
 )   as snapshot of northwind
 
 
@@ -61,7 +61,7 @@ GO
 --der Restore geht nur, wenn alle Connections beendet wurden
 
 restore database northwind
-from database_snapshot ='nw_1400'
+from database_snapshot ='nw_1616'
 
 
 select * from sysprocesses where spid > 50 and dbid in(11,5)

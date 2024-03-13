@@ -1,6 +1,6 @@
 --Sortierbar geworden
 
---Optimierung durch besser Kompression
+--Optimierung durch besser Kompression ab SQL 2022
 --bessere Aufräumaktionen
 --kombinierbar mit in Memory Tabellen
 CREATE CLUSTERED COLUMNSTORE INDEX CSIX

@@ -59,6 +59,7 @@ WINDOW  winasc AS (base ORDER BY name ASC)
 ORDER BY OBJECT_ID, RID;
 
 
+--Ds hier geht nicht.. Mehrfache referenzierung
 SELECT
      object_id
     ,name
@@ -69,8 +70,8 @@ SELECT
 FROM sys.all_columns
 WINDOW  base  AS (PARTITION BY object_id)
        ,winorder AS (ORDER BY name ASC)
-       ,test AS (base winorder)
-       ,windesc AS (base ORDER BY name DESC)
+--     ,test AS (base winorder)
+--       ,windesc AS (base ORDER BY name DESC)
 ORDER BY OBJECT_ID, RID;
 
 SELECT
